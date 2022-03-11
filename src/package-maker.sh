@@ -5,7 +5,7 @@ arch="noarch"
 license=$(licensee detect $(git rev-parse --show-toplevel) | grep License: | head -1 | sed 's/ //g' | awk -F ':' '{print $2}')
 summary=$(gh repo view --json description | jq -r '.description')
 spec=rpmbuild/SPECS/$package_name.spec
-url=$(git config --get remote.origin.url)
+url=$(gh repo view --json url | jq -r '.url')
 mkdir -p rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}|| exit 1
 echo -n >$spec
 echo "Name:      $package_name">>$spec
