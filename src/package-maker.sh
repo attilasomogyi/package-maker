@@ -15,5 +15,4 @@ echo "Summary:   $summary">>$spec
 echo "License:   $license">>$spec
 echo "URL:       $url" >>$spec
 echo "Source0:   $url" >>$spec
-echo "Patch0:    $url" >>$spec
 echo "BuildArch: $arch">>$spec
