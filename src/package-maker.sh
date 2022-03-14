@@ -28,5 +28,7 @@ echo "%build">>$spec
 echo "%install">>$spec
 echo "%check">>$spec
 echo "%files">>$spec
+echo "%license LICENSE.md">>$spec
 echo "%changelog">>$spec
 pandoc -f gfm -t plain $(git rev-parse --show-toplevel)/CHANGELOG.md>>$spec
+
