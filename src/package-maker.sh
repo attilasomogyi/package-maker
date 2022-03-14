@@ -9,6 +9,10 @@ url=$(gh repo view --json url | jq -r '.url')
 build_requires=""
 requires=""
 source_url=""
+debian_changelog=debian/changelog
+debian_compact=debian/compact
+debian_compact_level=10
+debian_control=debian/control
 mkdir -p rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}|| exit 1
 echo -n >$spec
 echo "Name:          $package_name">>$spec
@@ -31,4 +35,8 @@ echo "%files">>$spec
 echo "%license LICENSE.md">>$spec
 echo "%changelog">>$spec
 pandoc -f gfm -t plain $(git rev-parse --show-toplevel)/CHANGELOG.md>>$spec
-
+mkdir -p debian
+pandoc -f gfm -t plain $(git rev-parse --show-toplevel)/CHANGELOG.md>>$debian_changelog
+echo "$debian_compact_level">$debian_compact
+echo -n>$debian_control
+echo "Source: $package_name">>$debian_control
