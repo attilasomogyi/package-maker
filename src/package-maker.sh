@@ -1,6 +1,8 @@
 #!/bin/bash
 package_name=$(basename `git rev-parse --show-toplevel`)
 package_version=$(git describe --abbrev=0 | sed 's/v//')
+maintainer_name=$(git config --get user.name)
+maintainer_email=$(git config --get user.email)
 arch="noarch"
 license=$(licensee detect $(git rev-parse --show-toplevel) | grep License: | head -1 | sed 's/ //g' | awk -F ':' '{print $2}')
 summary=$(gh repo view --json description | jq -r '.description')
@@ -40,3 +42,4 @@ pandoc -f gfm -t plain $(git rev-parse --show-toplevel)/CHANGELOG.md>>$debian_ch
 echo "$debian_compact_level">$debian_compact
 echo -n>$debian_control
 echo "Source: $package_name">>$debian_control
+echo "Maintainer: $maintainer_name <$maintainer_email>">>$debian_control
