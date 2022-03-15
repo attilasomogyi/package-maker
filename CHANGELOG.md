@@ -1,10 +1,12 @@
+# [0.6.0](https://github.com/attilasomogyi/package-maker/compare/v0.5.0...v0.6.0) (2022-03-15)
+### Features
+* **core:** add maintainer section to debian control file ([59af6ca](https://github.com/attilasomogyi/package-maker/commit/59af6ca814b4b7290240c3367e3646e24dc44925))
 # [0.5.0](https://github.com/attilasomogyi/package-maker/compare/v0.4.0...v0.5.0) (2022-03-14)
 ### Features
 * **core:** add debain packge support ([b1dea1f](https://github.com/attilasomogyi/package-maker/commit/b1dea1fed783af3054217aedb25ff29f739470f0))
 # [0.4.0](https://github.com/attilasomogyi/package-maker/compare/v0.3.1...v0.4.0) (2022-03-14)
 ### Features
 * **core:** add rpm spec LICENSE options ([2ec09d5](https://github.com/attilasomogyi/package-maker/commit/2ec09d5b619060cf7e7245c9ca59c8c55c346008))
-## [0.3.1](https://github.com/attilasomogyi/package-maker/compare/v0.3.0...v0.3.1) (2022-03-11)
 # [0.3.0](https://github.com/attilasomogyi/package-maker/compare/v0.2.2...v0.3.0) (2022-03-11)
 ### Features
 * **core:** add new spec sections to rpm package description ([a28b4ac](https://github.com/attilasomogyi/package-maker/commit/a28b4ace98afe6bbd922a31b3a200700def78d9e))
