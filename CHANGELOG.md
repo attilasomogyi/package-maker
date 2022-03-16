@@ -1,3 +1,6 @@
+# [0.7.0](https://github.com/attilasomogyi/package-maker/compare/v0.6.1...v0.7.0) (2022-03-16)
+### Features
+* **core:** add debian copyright section ([3301d1c](https://github.com/attilasomogyi/package-maker/commit/3301d1cb4ec28ee0baa6d6b93f4530709682543d))
 # [0.6.0](https://github.com/attilasomogyi/package-maker/compare/v0.5.0...v0.6.0) (2022-03-15)
 ### Features
 * **core:** add maintainer section to debian control file ([59af6ca](https://github.com/attilasomogyi/package-maker/commit/59af6ca814b4b7290240c3367e3646e24dc44925))
