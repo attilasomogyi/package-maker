@@ -2,7 +2,9 @@
 import os
 import git
 from jinja2 import Template
-class Git:
+
+
+class Package:
 
     def __init__(self, path):
         self.path = path
@@ -12,7 +14,8 @@ class Git:
         git_root = git_repo.git.rev_parse("--show-toplevel")
         return git_root
 
+
 if __name__ == "__main__":
-    current_git_root = Git("./")
+    current_git_root = Package("./")
     git_root = current_git_root.get_git_root()
     print(git_root)
