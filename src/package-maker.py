@@ -26,12 +26,13 @@ class Package:
         return package_version
 
     def get_maintainer_name(self):
-        maintainer_name = (self.git_repo.config_reader().get_value("user","name"))
+        maintainer_name = (
+            self.git_repo.config_reader().get_value("user", "name"))
         return maintainer_name
-    
 
     def get_maintainer_email_address(self):
-        maintainer_email_address = (self.git_repo.config_reader().get_value("user","email"))
+        maintainer_email_address = (
+            self.git_repo.config_reader().get_value("user", "email"))
         return maintainer_email_address
 
 
